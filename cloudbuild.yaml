@@ -18,7 +18,7 @@ steps:
       [
         'build',
         '-t',
-        'us-central1-docker.pkg.dev/$PROJECT_ID/img-studio:latest',
+        '${_REGION}-docker.pkg.dev/$PROJECT_ID/img-studio:latest',
         '--build-arg',
         '_NEXT_PUBLIC_PROJECT_ID=$PROJECT_ID',
         '--build-arg',
@@ -48,10 +48,10 @@ steps:
         '.',
       ]
 images:
-  - 'us-central1-docker.pkg.dev/$PROJECT_ID/img-studio:latest'
+  - '${_REGION}-docker.pkg.dev/$PROJECT_ID/img-studio:latest'
 
 options:
   logging: CLOUD_LOGGING_ONLY
   pool:
-    name: 'projects/$PROJECT_ID/locations/us-central1/workerPools/${_PRIVATE_POOL_ID}'
+    name: 'projects/$PROJECT_ID/locations/${_REGION}/workerPools/${_PRIVATE_POOL_ID}'
 
