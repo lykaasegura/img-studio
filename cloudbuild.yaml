@@ -53,5 +53,5 @@ images:
 options:
   logging: CLOUD_LOGGING_ONLY
   pool:
-    name: 'projects/$PROJECT_ID/locations/us-central1/workerPools/_PRIVATE_POOL_ID'
+    name: 'projects/$PROJECT_ID/locations/us-central1/workerPools/${_PRIVATE_POOL_ID}'
 
