@@ -48,7 +48,7 @@ steps:
         '.',
       ]
 images:
-  - 'gcr.io/$PROJECT_ID/img-studio:latest'
+  - 'us-central1-docker.pkg.dev/$PROJECT_ID/img-studio:latest'
 
 options:
   logging: CLOUD_LOGGING_ONLY
